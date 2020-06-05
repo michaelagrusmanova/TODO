@@ -24,7 +24,7 @@ function hasParam(request, key, value) {
  * Odešle obecný požadavek.
  */
 export const Api = (url, params, options) => {
-    const request = new URL(url, 'http://localhost:3000'); //PORT??
+    //const request = new URL(url, 'http://localhost:3000'); //PORT??
 
     // načtení nalezených parametrů URL dotazu
     Object.keys(params)
@@ -32,7 +32,7 @@ export const Api = (url, params, options) => {
             key => hasParam(request, key, params[key])
         );
 
-    return sendApiRequest(request, options);
+    return sendApiRequest(url, options);
 };
 
 /*
