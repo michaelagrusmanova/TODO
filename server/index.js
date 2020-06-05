@@ -7,6 +7,7 @@
 	const cookieParser = require("cookie-parser")
 	const xss = require("xss-clean")
 	var sanitize = require('mongo-sanitize');   //xss attacks
+	const path = require('path');
 
 	//const checkAuth = require('./middleware/checkAuth')
 	app.use(express.json());
