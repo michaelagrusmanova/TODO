@@ -29,7 +29,7 @@ export const Api = (url, params, options) => {
     // načtení nalezených parametrů URL dotazu
     Object.keys(params)
         .forEach(
-            key => hasParam(request, key, params[key])
+            key => hasParam(url, key, params[key])
         );
 
     return sendApiRequest(url, options);
